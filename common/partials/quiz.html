@@ -1,0 +1,25 @@
+<div class="main">
+<div ng-if="!(currentPage > totalItems)" class="quiz-board" ng-repeat=" q in filteredQuestions">
+  Javascript Quiz {{currentPage}} of {{totalItems}}
+
+  <h3>{{q.text}}</h3>
+  <ol type="A">
+    <li ng-repeat="option in q.options">
+    {{option}}
+    </li>
+  </ol>
+  <button ng-repeat="ao in alphaOptions" class="quiz-btn" ng-click="isAnswered(ao, currentPage)">{{ao.label}}</button>
+</div>
+
+<div ng-if="(currentPage > totalItems)" class="quiz-board">
+  <h2 ng-class="(reportTest() >= 50) ? 'text-success': 'text-danger'">You got {{reportTest()}} %.</h2>
+    <div class="ans" ng-repeat="ans in allQuestions">
+      <p> Question: {{ans.text}} ? 
+      <span ng-if="(ans.answer == ans.qAnswered)" class="text-success"><i class="fa fa-check" aria-hidden="true"></i></span>
+      <span ng-if="(ans.answer !== ans.qAnswered)" class="text-danger"><i class="fa fa-times" aria-hidden="true"></i></span>
+      </p> 
+      <p> Answer: {{ans.answer}}</p>
+    <div>
+
+</div>
+</div>

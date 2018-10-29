@@ -1,0 +1,34 @@
+html,body{
+    height: 100%;
+}
+
+body{
+  background: #3c6547  url("/assets/images/board.png");
+/*    background-position: center;
+*/    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.quiz-board{
+  color: #fff;
+  padding: 50px 100px;
+}
+
+.main{
+
+}
+
+.quiz-btn{
+    background: transparent;
+    width: 60px;
+    height: 60px;
+    margin: 100px 10px 10px 10px;
+}
+
+.ans{
+    border: 1px solid;
+    padding: 10px;
+    margin: 10px;
+}
